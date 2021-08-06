@@ -20,9 +20,12 @@ namespace EDDISpeaker
     {
         private Config _config;
 
+        public App() {
+            _config = ConfigUtils.Load<Config>("general");
+        }
+
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            _config = ConfigUtils.Load<Config>("general");
             containerRegistry.RegisterInstance(_config);
         }
 
