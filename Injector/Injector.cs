@@ -1,14 +1,12 @@
 ﻿using Codeer.Friendly.Dynamic;
 using Codeer.Friendly.Windows;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Reflection;
-using System.Text;
 
 namespace Injector
 {
-    class Injector
+    public static class Injector
     {
         public static string GetKey(string processName)
         {
