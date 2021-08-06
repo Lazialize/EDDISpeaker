@@ -37,7 +37,7 @@ namespace EDDISpeaker.Utils
                 Directory.CreateDirectory(ConfigPath);
             }
 
-            var filePath = Path.Combine(ConfigPath, config.GetType().Name + ConfigExtension);
+            var filePath = Path.Combine(ConfigPath, fileName + ConfigExtension);
             using var stream = new FileStream(filePath, FileMode.OpenOrCreate, FileAccess.Write);
             var options = new JsonWriterOptions() { Indented = true };
             using var writer = new Utf8JsonWriter(stream, options);
