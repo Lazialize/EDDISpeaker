@@ -19,4 +19,9 @@
     <PackageReference Include="WindowsAPICodePack-Shell" Version="1.1.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AITalkAPI\AITalkAPI.csproj" />
+    <ProjectReference Include="..\Injector\Injector.csproj" />
+  </ItemGroup>
+
 </Project>
