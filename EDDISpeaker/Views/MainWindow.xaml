@@ -5,8 +5,83 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EDDISpeaker.Views"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="{Binding AppName}" Height="450" Width="400">
+    <DockPanel>
+        <StatusBar DockPanel.Dock="Bottom" >
+            <StatusBarItem>
+                <TextBlock Text="{Binding Version}"/>
+            </StatusBarItem>
+        </StatusBar>
+        <StackPanel Margin="5">
+            <GroupBox Header="音声効果" Padding="5">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="5"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="5"/>
+                        <ColumnDefinition Width="30"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="5"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="5"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="5"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="音量"/>
+                    <Slider Grid.Row="0" Grid.Column="2"/>
+                    <TextBox Grid.Row="0" Grid.Column="4"/>
+
+                    <TextBlock Grid.Row="2" Grid.Column="0" Text="話速"/>
+                    <Slider Grid.Row="2" Grid.Column="2"/>
+                    <TextBox Grid.Row="2" Grid.Column="4"/>
+
+                    <TextBlock Grid.Row="4" Grid.Column="0" Text="高さ"/>
+                    <Slider Grid.Row="4" Grid.Column="2"/>
+                    <TextBox Grid.Row="4" Grid.Column="4"/>
+
+                    <TextBlock Grid.Row="6" Grid.Column="0" Text="抑揚"/>
+                    <Slider Grid.Row="6" Grid.Column="2"/>
+                    <TextBox Grid.Row="6" Grid.Column="4"/>
+                </Grid>
+            </GroupBox>
+
+            <GroupBox Header="ポーズの長さ" Padding="5">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="5"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="5"/>
+                        <ColumnDefinition Width="30"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="5"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="5"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="短ポーズ"/>
+                    <Slider Grid.Row="0" Grid.Column="2"/>
+                    <TextBox Grid.Row="0" Grid.Column="4"/>
+
+                    <TextBlock Grid.Row="2" Grid.Column="0" Text="長ポーズ"/>
+                    <Slider Grid.Row="2" Grid.Column="2"/>
+                    <TextBox Grid.Row="2" Grid.Column="4"/>
+
+                    <TextBlock Grid.Row="4" Grid.Column="0" Text="文末ポーズ"/>
+                    <Slider Grid.Row="4" Grid.Column="2"/>
+                    <TextBox Grid.Row="4" Grid.Column="4"/>
+                </Grid>
+            </GroupBox>
+        </StackPanel>
+    </DockPanel>
 </Window>
