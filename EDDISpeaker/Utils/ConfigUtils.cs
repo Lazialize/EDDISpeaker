@@ -16,7 +16,7 @@ namespace EDDISpeaker.Utils
         {
             var filePath = Path.Combine(ConfigPath, fileName + ConfigExtension);
 
-            if (!File.Exists(fileName))
+            if (!File.Exists(filePath))
             {
                 Save(Activator.CreateInstance<T>(), fileName);
             }
